@@ -19,7 +19,11 @@ makeCacheMatrix <- function(x = matrix()) {
   getInverse  <- function() cachedInv
   list(set=set, get=get, setInverse=setInverse, getInverse=getInverse)
 }
-cacheSolve <- function(x=makeCacheMatrix(1:4, nrow=2, ncol=2), ...) {
+
+
+## Write a short comment describing this function
+
+      cacheSolve <- function(x=makeCacheMatrix(1:4, nrow=2, ncol=2), ...) {
   
   calculatedInverse <- x$getInverse() 
   
@@ -34,13 +38,4 @@ cacheSolve <- function(x=makeCacheMatrix(1:4, nrow=2, ncol=2), ...) {
   
   message("value of inverse:") 
   x$setInverse(calculatedInverse)
-}
-
-
-
-
-## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
 }
